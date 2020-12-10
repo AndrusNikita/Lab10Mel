@@ -4,27 +4,18 @@
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-    <title>First JSP</title>
+    <title>Lab 10 Marina</title>
 </head>
 <body>
 <h2> Enter parameters of equation</h2>
 <form method="post" action="/my-app/cool-servlet">
-    <h3>Enter a1:</h3>
-    <input type="text" name="a1">
-    <h3>Enter a2:</h3>
-    <input type="text" name="a2">
-    <h3>Enter b1:</h3>
-    <input type="text" name="b1">
-    <h3>Enter b2:</h3>
-    <input type="text" name="b2">
-    <h3>Enter c1:</h3>
-    <input type="text" name="c1">
-    <h3>Enter c2:</h3>
-    <input type="text" name="c2">
+    <h3> &nbsp;Enter start day: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter start month: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter start year: </h3>
+    <input type="text" name="StartDay"> <input type="text" name="StartMonth"> <input type="text" name="StartYear">
+    <h3> &nbsp;Enter end day: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter end month: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter end year: </h3>
+    <input type="text" name="EndDay"> <input type="text" name="EndMonth"> <input type="text" name="EndYear">
     <br/>
     <br/>
-    <button type="submit">Send</button>
-
+    &nbsp;&nbsp;<button type="submit">Сalculate</button>
 </form>
 
 </body>

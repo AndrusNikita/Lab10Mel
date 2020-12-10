@@ -5,12 +5,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lab10</title>
+    <title>Lab 10 Marina</title>
 </head>
 <body>
-<h2>Result page:</h2>
-
-<h3><c:out value ="${notification}" /></h3>
+</br>
+</br>
+<h2>&nbsp;&nbsp;<c:out value ="${notification}" /></h2>
 
 
 </body>

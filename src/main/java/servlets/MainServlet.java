@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/cool-servlet", "/my-cool-servlet/*"})
 public class MainServlet extends HttpServlet {
-    private double[] Arr = new double[6];
+    private int[] Arr = new int[3];
     private String notification;
     Service service = new Service();
 
@@ -24,21 +24,15 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Arr[0] = Double.parseDouble(req.getParameter("a1"));
-        Arr[1] = Double.parseDouble(req.getParameter("b1"));
-        Arr[2] = Double.parseDouble(req.getParameter("c1"));
-        Arr[3] = Double.parseDouble(req.getParameter("a2"));
-        Arr[4] = Double.parseDouble(req.getParameter("b2"));
-        Arr[5] = Double.parseDouble(req.getParameter("c2"));
+        Arr[0] = Integer.parseInt(req.getParameter("StartYear"));
+        Arr[1] = Integer.parseInt(req.getParameter("EndYear"));
 
-         notification = service.gaussian(Arr);
+
+         notification = service.equation(Arr);
 
         req.setAttribute("notification", notification);
         getServletContext().getRequestDispatcher("/info.jsp").forward(req, resp);
 
-       // resp.getWriter().write("Result:\n " + notification + "\n");
-
     }
-
 
 }
